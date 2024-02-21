@@ -5,7 +5,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile3, function (sprit
     game.splash("Game OVer")
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
-    tiles.placeOnTile(sprite, tiles.getTileLocation(randint(10, 28), randint(50, 59)))
+    tiles.placeOnTile(sprite, tiles.getTileLocation(randint(14, 22), randint(50, 55)))
 })
 controller.player2.onEvent(ControllerEvent.Connected, function () {
 	
@@ -178,7 +178,7 @@ let Obstacles = sprites.create(img`
     `, SpriteKind.Enemy)
 Obstacles.setVelocity(-350, 0)
 tiles.placeOnTile(Obstacles, tiles.getTileLocation(29, 28))
-tiles.placeOnTile(p1, tiles.getTileLocation(randint(10, 28), randint(50, 59)))
+tiles.placeOnTile(p1, tiles.getTileLocation(randint(14, 22), randint(50, 55)))
 game.onUpdate(function () {
     if (Obstacles.isHittingTile(CollisionDirection.Left)) {
         Obstacles.vx += 350
