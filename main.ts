@@ -153,6 +153,9 @@ function Map1Spawn () {
     tiles.placeOnTile(p3, tiles.getTileLocation(18, 54))
     tiles.placeOnTile(p4, tiles.getTileLocation(19, 54))
 }
+function WinScreen () {
+    scene.setBackgroundColor(15)
+}
 let EnemyImg: Image[] = []
 let ObsDelete = 0
 let myMenu2: miniMenu.MenuSprite = null
