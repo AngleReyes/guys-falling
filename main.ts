@@ -74,7 +74,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
     sprite.ay += -10
 })
 function Map2 () {
-    scene.cameraFollowSprite(p1)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera1, p1)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera2, p2)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera3, p3)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera4, p4)
     tiles.setCurrentTilemap(tilemap`level0`)
 }
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
@@ -87,7 +90,10 @@ function Map3Spawn () {
     tiles.placeOnTile(p4, tiles.getTileLocation(31, 3))
 }
 function Map3 () {
-    scene.cameraFollowSprite(p1)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera1, p1)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera2, p2)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera3, p3)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera4, p4)
     tiles.setCurrentTilemap(tilemap`level3`)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
@@ -97,7 +103,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherS
     otherSprite.x += randint(-5, 5)
 })
 function Map1 () {
-    scene.cameraFollowSprite(p1)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera1, p1)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera2, p2)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera3, p3)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera4, p4)
     tiles.setCurrentTilemap(tilemap`level`)
 }
 scene.onHitWall(SpriteKind.Projectile, function (sprite, location) {
@@ -244,10 +253,6 @@ myMenu.onButtonPressed(controller.A, function (selection, selectedIndex) {
         . . . f f f f f f . . . 
         . . . f f . . f f . . . 
         `, SpriteKind.Player)
-    p1.setStayInScreen(true)
-    p2.setStayInScreen(true)
-    p3.setStayInScreen(true)
-    p4.setStayInScreen(true)
     p1.x = 0
     p2.x = 50
     p3.x = 32
