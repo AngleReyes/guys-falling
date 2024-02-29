@@ -46,7 +46,10 @@ function MapSelect () {
     })
 }
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile3, function (sprite, location) {
-    scene.cameraFollowSprite(sprite)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera1, sprite)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera2, sprite)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera3, sprite)
+    splitScreen.cameraFollowSprite(splitScreen.Camera.Camera4, sprite)
     list.unshift(sprite)
     WinScreen()
 })
