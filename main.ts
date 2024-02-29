@@ -71,8 +71,7 @@ scene.onHitWall(SpriteKind.Enemy, function (sprite, location) {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     sprites.destroy(otherSprite, effects.disintegrate, 500)
-    sprite.vx += 20
-    sprite.vy += 20
+    sprite.ay += -10
 })
 function Map2 () {
     scene.cameraFollowSprite(p1)
@@ -155,8 +154,7 @@ function SpawnPowerUp (num: number) {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(otherSprite)
-    sprite.vx += 10
-    sprite.vy += 10
+    sprite.ay += -10
 })
 let Special: Sprite = null
 let PowerUp: Sprite = null
