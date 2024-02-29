@@ -256,10 +256,10 @@ myMenu.onButtonPressed(controller.A, function (selection, selectedIndex) {
         . . . f f f f f f . . . 
         . . . f f . . f f . . . 
         `, SpriteKind.Player)
-    p1.x = 0
-    p2.x = 50
-    p3.x = 32
-    p4.x = 64
+    p1.x = 100
+    p2.x = 200
+    p3.x = 300
+    p4.x = 600
     if (selectedIndex == 0) {
         MapSelect()
     }
