@@ -74,7 +74,7 @@ scene.onHitWall(SpriteKind.Enemy, function (sprite, location) {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     sprites.destroy(otherSprite, effects.disintegrate, 500)
-    sprite.ay += -10
+    sprite.ay += -30
 })
 function Map2 () {
     splitScreen.cameraFollowSprite(splitScreen.Camera.Camera1, p1)
@@ -84,7 +84,7 @@ function Map2 () {
     tiles.setCurrentTilemap(tilemap`level0`)
 }
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
-    tiles.placeOnTile(sprite, tiles.getTileLocation(randint(14, 22), randint(50, 55)))
+    tiles.placeOnRandomTile(sprite, sprites.skillmap.islandTile4)
 })
 function Map3Spawn () {
     tiles.placeOnTile(p1, tiles.getTileLocation(28, 3))
