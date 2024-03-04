@@ -6,6 +6,7 @@ function MapSelect () {
     )
     myMenu2.setMenuStyleProperty(miniMenu.MenuStyleProperty.Width, 50)
     myMenu2.setMenuStyleProperty(miniMenu.MenuStyleProperty.Height, 100)
+    // Code provided by Mini Menu Extension
     myMenu2.setStyleProperty(miniMenu.StyleKind.DefaultAndSelected, miniMenu.StyleProperty.Border, miniMenu.createBorderBox(
     4,
     0,
@@ -132,6 +133,7 @@ function WinScreen () {
     list[0].startEffect(effects.confetti, 500)
     effects.confetti.endScreenEffect()
 }
+// Sample code provided by teacher
 function SpawnPowerUp (num: number) {
     if (num < EnemyImg.length) {
         for (let index = 0; index < num; index++) {
@@ -179,6 +181,7 @@ let p3: Sprite = null
 let p2: Sprite = null
 let p1: Sprite = null
 scene.setBackgroundColor(11)
+// Code provided by Mini Menu Extension
 let myMenu = miniMenu.createMenu(
 miniMenu.createMenuItem("Choose Map")
 )
